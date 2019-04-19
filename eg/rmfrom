@@ -1,0 +1,7 @@
+#!/usr/bin/perl -n
+
+# $Header: rmfrom,v 3.0 89/10/18 15:15:20 lwall Locked $
+
+# A handy (but dangerous) script to put after a find ... -print.
+
+chop; unlink;

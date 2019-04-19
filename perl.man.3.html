@@ -1,0 +1,2969 @@
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Fri Apr 19 17:26:00 2019 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title></title>
+</head>
+<body>
+
+<hr>
+
+
+<p>The command is like the statement in C; it starts the
+next iteration of the loop:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>line: while (&lt;STDIN&gt;) {</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>next line if /^#/;</p></td>
+<td width="23%"></td>
+<td width="8%">
+
+
+<p># discard comments</p></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>...</p></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Note that if there were a block
+on the above, it would get executed even on discarded lines.
+If the LABEL is omitted, the command refers to the innermost
+enclosing loop. Returns the decimal value of EXPR
+interpreted as an octal string. (If EXPR happens to start
+off with 0x, interprets it as a hex string instead.) The
+following will handle decimal, octal and hex in the standard
+notation:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$val = oct($val) if $val =~ /^0/;</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">If EXPR is omitted, uses $_.
+Opens the file whose filename is given by EXPR, and
+associates it with FILEHANDLE. If FILEHANDLE is an
+expression, its value is used as the name of the real
+filehandle wanted. If EXPR is omitted, the scalar variable
+of the same name as the FILEHANDLE contains the filename. If
+the filename begins with &lt; or nothing, the file is opened
+for input. If the filename begins with &gt;, the file is
+opened for output. If the filename begins with &gt;&gt;, the
+file is opened for appending. (You can put a &acute;+&acute;
+in front of the &acute;&gt;&acute; or &acute;&lt;&acute; to
+indicate that you want both read and write access to the
+file.) If the filename begins with |, the filename is
+interpreted as a command to which output is to be piped, and
+if the filename ends with a |, the filename is interpreted
+as command which pipes input to us. (You may not have a
+command that pipes both in and out.) Opening
+&acute;&minus;&acute; opens and opening
+&acute;&gt;&minus;&acute; opens Open returns non-zero upon
+success, the undefined value otherwise. If the open involved
+a pipe, the return value happens to be the pid of the
+subprocess. Examples:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$article = 100;</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open article || die &quot;Can&rsquo;t find article
+$article: $!\n&quot;;</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>while (&lt;article&gt;) {...</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(LOG,
+&acute;&gt;&gt;/usr/spool/news/twitlog&acute;);</p> </td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%">
+
+
+<p># (log is reserved)</p></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(article, &quot;caesar &lt;$article |&quot;);</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p># decrypt article</p></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(extract, &quot;|sort &gt;/tmp/Tmp$$&quot;);</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p># $$ is our process#</p></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p># process argument list of files along with any
+includes</p> </td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>foreach $file (@ARGV) {</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>do process($file, &acute;fh00&acute;);</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%">
+
+
+<p># no pun intended</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>sub process {</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>local($filename, $input) = @_;</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>$input++;</p></td>
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># this is a string increment</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>unless (open($input, $filename)) {</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>print STDERR &quot;Can&rsquo;t open $filename:
+$!\n&quot;;</p> </td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>return;</p></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>while (&lt;$input&gt;) {</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p># note the use of indirection</p></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>if (/^#include &quot;(.*)&quot;/) {</p></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+</td>
+<td width="7%">
+
+
+<p>do process($1, $input);</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+</td>
+<td width="7%">
+
+
+<p>next;</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>}</p></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>...</p></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># whatever</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="15%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">You may also, in the Bourne
+shell tradition, specify an EXPR beginning with &gt;&amp;,
+in which case the rest of the string is interpreted as the
+name of a filehandle (or file descriptor, if numeric) which
+is to be duped and opened. Here is a script that saves,
+redirects, and restores and</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>#!/usr/bin/perl</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(SAVEOUT, &quot;&gt;&amp;STDOUT&quot;);</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(SAVEERR, &quot;&gt;&amp;STDERR&quot;);</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(STDOUT, &quot;&gt;foo.out&quot;) || die
+&quot;Can&rsquo;t redirect stdout&quot;;</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(STDERR, &quot;&gt;&amp;STDOUT&quot;) || die
+&quot;Can&rsquo;t dup stdout&quot;;</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>select(STDERR); $| = 1;</p></td>
+<td width="31%"></td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p># make unbuffered</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>select(STDOUT); $| = 1;</p></td>
+<td width="31%"></td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p># make unbuffered</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>print STDOUT &quot;stdout 1\n&quot;;</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%">
+
+
+<p># this works for</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>print STDERR &quot;stderr 1\n&quot;;</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%">
+
+
+<p># subprocesses too</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>close(STDOUT);</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>close(STDERR);</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(STDOUT, &quot;&gt;&amp;SAVEOUT&quot;);</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(STDERR, &quot;&gt;&amp;SAVEERR&quot;);</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>print STDOUT &quot;stdout 2\n&quot;;</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>print STDERR &quot;stderr 2\n&quot;;</p></td>
+<td width="31%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">If you open a pipe on the
+command &minus;, i.e. either |&minus; or &minus;|, then
+there is an implicit fork done, and the return value of open
+is the pid of the child within the parent process, and 0
+within the child process. (Use defined($pid) to determine if
+the open was successful.) The filehandle behaves normally
+for the parent, but i/o to that filehandle is piped from/to
+the of the child process. In the child process the
+filehandle isn&rsquo;t openedi/o happens from/to the new or
+Typically this is used like the normal piped open when you
+want to exercise more control over just how the pipe command
+gets executed, such as when you are running setuid, and
+don&rsquo;t want to have to scan shell commands for
+metacharacters. The following pairs are equivalent:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>open(FOO, &quot;|tr &acute;[a&minus;z]&acute;
+&acute;[A&minus;Z]&acute;&quot;);</p> </td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>open(FOO, &quot;|&minus;&quot;) || exec
+&acute;tr&acute;, &acute;[a&minus;z]&acute;,
+&acute;[A&minus;Z]&acute;;</p> </td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>open(FOO, &quot;cat &minus;n $file|&quot;);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>open(FOO, &quot;&minus;|&quot;) || exec
+&acute;cat&acute;, &acute;&minus;n&acute;, $file;</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">Explicitly closing any piped
+filehandle causes the parent process to wait for the child
+to finish, and returns the status value in $?. Opens a
+directory named EXPR for processing by readdir(), telldir(),
+seekdir(), rewinddir() and closedir(). Returns true if
+successful. DIRHANDLEs have their own namespace separate
+from FILEHANDLEs. Returns the ascii value of the first
+character of EXPR. If EXPR is omitted, uses $_. Takes an
+array or list of values and packs it into a binary
+structure, returning the string containing the structure.
+The TEMPLATE is a sequence of characters that give the order
+and type of values, as follows:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>A</p></td>
+<td width="8%">
+
+
+<p>An ascii string, will be space padded.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>a</p></td>
+<td width="8%">
+
+
+<p>An ascii string, will be null padded.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>c</p></td>
+<td width="8%">
+
+
+<p>A native char value.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>C</p></td>
+<td width="8%">
+
+
+<p>An unsigned char value.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>s</p></td>
+<td width="8%">
+
+
+<p>A signed short value.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>S</p></td>
+<td width="8%">
+
+
+<p>An unsigned short value.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>i</p></td>
+<td width="8%">
+
+
+<p>A signed integer value.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>I</p></td>
+<td width="8%">
+
+
+<p>An unsigned integer value.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>l</p></td>
+<td width="8%">
+
+
+<p>A signed long value.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>L</p></td>
+<td width="8%">
+
+
+<p>An unsigned long value.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>n</p></td>
+<td width="8%">
+
+
+<p>A short in network order.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>N</p></td>
+<td width="8%">
+
+
+<p>A long in network order.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>p</p></td>
+<td width="8%">
+
+
+<p>A pointer to a string.</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>x</p></td>
+<td width="8%">
+
+
+<p>A null byte.</p></td>
+<td width="77%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Each letter may optionally be
+followed by a number which gives a repeat count. With all
+types except &quot;a&quot; and &quot;A&quot; the pack
+function will gobble up that many values from the LIST. The
+&quot;a&quot; and &quot;A&quot; types gobble just one value,
+but pack it as a string that long, padding with nulls or
+spaces as necessary. (When unpacking, &quot;A&quot; strips
+trailing spaces and nulls, but &quot;a&quot; does not.)
+Examples:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$foo = pack(&quot;cccc&quot;,65,66,67,68);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># foo eq &quot;ABCD&quot;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$foo = pack(&quot;c4&quot;,65,66,67,68);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># same thing</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$foo = pack(&quot;ccxxcc&quot;,65,66,67,68);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># foo eq &quot;AB\0\0CD&quot;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$foo = pack(&quot;s2&quot;,1,2);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># &quot;\1\0\2\0&quot; on little-endian</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># &quot;\0\1\0\2&quot; on big-endian</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$foo =
+pack(&quot;a4&quot;,&quot;abcd&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;);</p> </td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># &quot;abcd&quot;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$foo =
+pack(&quot;aaaa&quot;,&quot;abcd&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;);</p> </td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># &quot;axyz&quot;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$foo = pack(&quot;a14&quot;,&quot;abcdefg&quot;);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># &quot;abcdefg\0\0\0\0\0\0\0&quot;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$foo = pack(&quot;i9pl&quot;, gmtime());</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p># a real struct tm (on my system anyway)</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">The same template may generally
+also be used in the unpack function. Pops and returns the
+last value of the array, shortening the array by 1. Has the
+same effect as</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$tmp = $ARRAY[$#ARRAY&minus;&minus;];</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">If there are no elements in the
+array, returns the undefined value. Prints a string or a
+comma-separated list of strings. Returns non-zero if
+successful. FILEHANDLE may be a scalar variable name, in
+which case the variable contains the name of the filehandle,
+thus introducing one level of indirection. If FILEHANDLE is
+omitted, prints by default to standard output (or to the
+last selected output channelsee select()). If LIST is also
+omitted, prints $_ to To set the default output channel to
+something other than use the select operation. Equivalent to
+a print FILEHANDLE sprintf(LIST). Treats ARRAY (@ is
+optional) as a stack, and pushes the values of LIST onto the
+end of ARRAY. The length of ARRAY increases by the length of
+LIST. Has the same effect as</p>
+
+<p style="margin-top: 1em">for $value (LIST) {</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$ARRAY[++$#ARRAY] = $value;</p></td></tr>
+</table>
+
+<p>}</p>
+
+<p style="margin-top: 1em">but is more efficient. These are
+not really functions, but simply syntactic sugar to let you
+avoid putting too many backslashes into quoted strings. The
+q operator is a generalized single quote, and the qq
+operator a generalized double quote. Any delimiter can be
+used in place of /, including newline. If the delimiter is
+an opening bracket or parenthesis, the final delimiter will
+be the corresponding closing bracket or parenthesis.
+(Embedded occurrences of the closing bracket need to be
+backslashed as usual.) Examples:</p>
+
+<p style="margin-top: 1em">$foo = q!I said, &quot;You said,
+&acute;She said it.&acute;&quot;!;</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$bar = q(&acute;This is it.&acute;);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$_ .= qq</p></td></tr>
+</table>
+
+<p>*** The previous line contains the naughty word
+&quot;$&amp;&quot;.\n</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>if /(ibm|apple|awk)/; # :-)</p></td>
+<td width="77%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Returns a random fractional
+number between 0 and the value of EXPR. (EXPR should be
+positive.) If EXPR is omitted, returns a value between 0 and
+1. See also srand(). Attempts to read LENGTH bytes of data
+into variable SCALAR from the specified FILEHANDLE. Returns
+the number of bytes actually read. SCALAR will be grown or
+shrunk to the length actually read. Returns the next
+directory entry for a directory opened by opendir(). If used
+in an array context, returns all the rest of the entries in
+the directory. If there are no more entries, returns an
+undefined value in a scalar context or a null list in an
+array context. Returns the value of a symbolic link, if
+symbolic links are implemented. If not, gives a fatal error.
+If there is some system error, returns the undefined value
+and sets $! (errno). If EXPR is omitted, uses $_. Receives a
+message on a socket. Attempts to receive LENGTH bytes of
+data into variable SCALAR from the specified SOCKET
+filehandle. Returns the address of the sender, or the
+undefined value if there&rsquo;s an error. SCALAR will be
+grown or shrunk to the length actually read. Takes the same
+flags as the system call of the same name. The command
+restarts the loop block without evaluating the conditional
+again. The block, if any, is not executed. If the LABEL is
+omitted, the command refers to the innermost enclosing loop.
+This command is normally used by programs that want to lie
+to themselves about what was just input:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p># a simpleminded Pascal comment stripper</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p># (warning: assumes no { or } in strings)</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>line: while (&lt;STDIN&gt;) {</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>while (s|({.*}.*){.*}|$1 |) {}</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>s|{.*}| |;</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>if (s|{.*| |) {</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>$front = $_;</p></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>while (&lt;STDIN&gt;) {</p></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+</td>
+<td width="7%">
+
+
+<p>if (/}/) {</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%">
+
+
+<p># end of comment?</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+</td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>s|^|$front{|;</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+</td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>redo line;</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+</td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>}</p></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>print;</p></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="38%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Changes the name of a file.
+Returns 1 for success, 0 otherwise. Will not work across
+filesystem boundaries. Generally used in a block at the end
+of a loop to clear variables and reset ?? searches so that
+they work again. The expression is interpreted as a list of
+single characters (hyphens allowed for ranges). All
+variables and arrays beginning with one of those letters are
+reset to their pristine state. If the expression is omitted,
+one-match searches (?pattern?) are reset to match again.
+Only resets variables or searches in the current package.
+Always returns 1. Examples:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+
+
+<p>reset &acute;X&acute;;</p><td width="6%"></td>
+<td width="2%"></td>
+<td width="15%"></td>
+<td width="8%">
+
+
+<p># reset all X variables</p></td>
+<td width="69%">
+</td></tr>
+</table>
+
+<p>reset &acute;a&minus;z&acute;; # reset lower case
+variables</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+
+
+<p>reset;</p><td width="6%"></td>
+<td width="2%"></td>
+<td width="15%"></td>
+<td width="8%">
+
+
+<p># just reset ?? searches</p></td>
+<td width="69%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Note: resetting A&minus;Z is not
+recommended since you&rsquo;ll wipe out your ARGV and ENV
+arrays. The use of reset on dbm associative arrays does not
+change the dbm file. (It does, however, flush any entries
+cached by perl, which may be useful if you are sharing the
+dbm file. Then again, maybe not.) Returns from a subroutine
+with the value specified. (Note that a subroutine can
+automatically return the value of the last expression
+evaluated. That&rsquo;s the preferred methoduse of an
+explicit is a bit slower.) Returns an array value consisting
+of the elements of LIST in the opposite order. Sets the
+current position to the beginning of the directory for the
+readdir() routine on DIRHANDLE. Works just like index except
+that it returns the position of the LAST occurrence of
+SUBSTR in STR. Deletes the directory specified by FILENAME
+if it is empty. If it succeeds it returns 1, otherwise it
+returns 0 and sets $! (errno). If FILENAME is omitted, uses
+$_. Searches a string for a pattern, and if found, replaces
+that pattern with the replacement text and returns the
+number of substitutions made. Otherwise it returns false
+(0). The g is optional, and if present, indicates that all
+occurrences of the pattern are to be replaced. The i is also
+optional, and if present, indicates that matching is to be
+done in a case-insensitive manner. The e is likewise
+optional, and if present, indicates that the replacement
+string is to be evaluated as an expression rather than just
+as a double-quoted string. Any delimiter may replace the
+slashes; if single quotes are used, no interpretation is
+done on the replacement string (the e modifier overrides
+this, however). If no string is specified via the =~ or !~
+operator, the $_ string is searched and modified. (The
+string specified with =~ must be a scalar variable, an array
+element, or an assignment to one of those, i.e. an lvalue.)
+If the pattern contains a $ that looks like a variable
+rather than an end-of-string test, the variable will be
+interpolated into the pattern at run-time. If you only want
+the pattern compiled once the first time the variable is
+interpolated, add an o at the end. See also the section on
+regular expressions. Examples:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+
+
+<p>s/\bgreen\b/mauve/g;</p><td width="6%"></td>
+<td width="2%"></td>
+<td width="30%"></td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p># don&rsquo;t change wintergreen</p></td>
+<td width="46%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">$path =~
+s|/usr/bin|/usr/local/bin|;</p>
+
+<p style="margin-top: 1em">s/Login: $foo/Login: $bar/; #
+run-time pattern</p>
+
+<p style="margin-top: 1em">($foo = $bar) =~ s/bar/foo/;</p>
+
+<p style="margin-top: 1em">$_ =
+&acute;abc123xyz&acute;;</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+
+
+<p>s/\d+/$&amp;*2/e;</p><td width="6%"></td>
+<td width="2%"></td>
+<td width="23%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># yields abc246xyz <br>
+s/\d+/sprintf(&quot;%5d&quot;,$&amp;)/e;</p></td>
+<td width="8%"></td>
+<td width="8%">
+
+
+<p># yields abc 246xyz <br>
+s/\w/$&amp; x 2/eg;</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="6%"></td>
+<td width="2%"></td>
+<td width="23%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># yields aabbcc 224466xxyyzz</p>
+
+<p style="margin-top: 1em">s/([^ ]*) *([^ ]*)/$2 $1/;</p></td>
+<td width="8%"></td>
+<td width="8%">
+
+
+<p># reverse 1st two fields</p></td>
+<td width="38%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">(Note the use of $ instead of \
+in the last example. See section on regular expressions.)
+Randomly positions the file pointer for FILEHANDLE, just
+like the fseek() call of stdio. FILEHANDLE may be an
+expression whose value gives the name of the filehandle.
+Returns 1 upon success, 0 otherwise. Sets the current
+position for the readdir() routine on DIRHANDLE. POS must be
+a value returned by seekdir(). Has the same caveats about
+possible directory compaction as the corresponding system
+library routine. Returns the currently selected filehandle.
+Sets the current default filehandle for output, if
+FILEHANDLE is supplied. This has two effects: first, a or a
+without a filehandle will default to this FILEHANDLE.
+Second, references to variables related to output will refer
+to this output channel. For example, if you have to set the
+top of form format for more than one output channel, you
+might do the following:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>select(REPORT1);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$^ = &acute;report1_top&acute;;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>select(REPORT2);</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$^ = &acute;report2_top&acute;;</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">FILEHANDLE may be an expression
+whose value gives the name of the actual filehandle.
+Thus:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$oldfh = select(STDERR); $| = 1; select($oldfh);</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">This calls the select system
+call with the bitmasks specified, which can be constructed
+using fileno() and vec(), along these lines:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$rin = $win = $ein = &rsquo;&rsquo;;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>vec($rin,fileno(STDIN),1) = 1;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>vec($win,fileno(STDOUT),1) = 1;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$ein = $rin | $win;</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">If you want to select on many
+filehandles you might wish to write a subroutine:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>sub fhbits {</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>local(@fhlist) = split(&rsquo; &rsquo;,$_[0]);</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>local($bits);</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>for (@fhlist) {</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>vec($bits,fileno($_),1) = 1;</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$bits;</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$rin = &amp;fhbits(&rsquo;STDIN TTY SOCK&rsquo;);</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">The usual idiom is:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>($nfound,$timeleft) =</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>select($rout=$rin, $wout=$win, $eout=$ein,
+$timeout);</p> </td></tr>
+</table>
+
+<p style="margin-top: 1em">or to block until something
+becomes ready:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$nfound = select($rout=$rin, $wout=$win, $eout=$ein,
+undef);</p> </td></tr>
+</table>
+
+<p style="margin-top: 1em">Any of the bitmasks can also be
+undef. The timeout, if specified, is in seconds, which may
+be fractional. Sets the current process group for the
+specified PID, 0 for the current process. Will produce a
+fatal error if used on a machine that doesn&rsquo;t
+implement setpgrp(2). Sends a message on a socket. Takes the
+same flags as the system call of the same name. On
+unconnected sockets you must specify a destination to send
+TO. Returns the number of characters sent, or the undefined
+value if there is an error. Sets the current priority for a
+process, a process group, or a user. (See setpriority(2).)
+Will produce a fatal error if used on a machine that
+doesn&rsquo;t implement setpriority(2). Sets the socket
+option requested. Returns undefined if there is an error.
+OPTVAL may be specified as undef if you don&rsquo;t want to
+pass an argument. Shifts the first value of the array off
+and returns it, shortening the array by 1 and moving
+everything down. If there are no elements in the array,
+returns the undefined value. If ARRAY is omitted, shifts the
+@ARGV array in the main program, and the @_ array in
+subroutines. See also unshift(), push() and pop(). Shift()
+and unshift() do the same thing to the left end of an array
+that push() and pop() do to the right end. Shuts down a
+socket connection in the manner indicated by HOW, which has
+the same interpretation as in the system call of the same
+name. Returns the sine of EXPR (expressed in radians). If
+EXPR is omitted, returns sine of $_. Causes the script to
+sleep for EXPR seconds, or forever if no EXPR. May be
+interrupted by sending the process a SIGALARM. Returns the
+number of seconds actually slept. Opens a socket of the
+specified kind and attaches it to filehandle SOCKET. DOMAIN,
+TYPE and PROTOCOL are specified the same as for the system
+call of the same name. You may need to run makelib on
+sys/socket.h to get the proper values handy in a perl
+library file. Return true if successful. See the example in
+the section on Interprocess Communication. Creates an
+unnamed pair of sockets in the specified domain, of the
+specified type. DOMAIN, TYPE and PROTOCOL are specified the
+same as for the system call of the same name. If
+unimplemented, yields a fatal error. Return true if
+successful. Sorts the LIST and returns the sorted array
+value. Nonexistent values of arrays are stripped out. If
+SUBROUTINE is omitted, sorts in standard string comparison
+order. If SUBROUTINE is specified, gives the name of a
+subroutine that returns an integer less than, equal to, or
+greater than 0, depending on how the elements of the array
+are to be ordered. In the interests of efficiency the normal
+calling code for subroutines is bypassed, with the following
+effects: the subroutine may not be a recursive subroutine,
+and the two elements to be compared are passed into the
+subroutine not via @_ but as $a and $b (see example below).
+They are passed by reference so don&rsquo;t modify $a and
+$b. SUBROUTINE may be a scalar variable name, in which case
+the value provides the name of the subroutine to use.
+Examples:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>sub byage {</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$age{$a} - $age{$b};</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%">
+
+
+<p># presuming integers</p></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>@sortedclass = sort byage @class;</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>sub reverse { $a lt $b ? 1 : $a gt $b ? &minus;1 : 0;
+}</p> </td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>@harry =
+(&acute;dog&acute;,&acute;cat&acute;,&acute;x&acute;,&acute;Cain&acute;,&acute;Abel&acute;);</p> </td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>@george =
+(&acute;gone&acute;,&acute;chased&acute;,&acute;yz&acute;,&acute;Punished&acute;,&acute;Axed&acute;);</p> </td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>print sort @harry;</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># prints AbelCaincatdogx</p></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>print sort reverse @harry;</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># prints xdogcatCainAbel</p></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>print sort @george, &acute;to&acute;, @harry;</p></td>
+<td width="8%"></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># prints AbelAxedCainPunishedcatchaseddoggonetoxyz</p></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Splits a string into an array of
+strings, and returns it. (If not in an array context,
+returns the number of fields found and splits into the @_
+array.) If EXPR is omitted, splits the $_ string. If PATTERN
+is also omitted, splits on whitespace (/[&nbsp;\t\n]+/).
+Anything matching PATTERN is taken to be a delimiter
+separating the fields. (Note that the delimiter may be
+longer than one character.) If LIMIT is specified, splits
+into no more than that many fields (though it may split into
+fewer). If LIMIT is unspecified, trailing null fields are
+stripped (which potential users of pop() would do well to
+remember). A pattern matching the null string (not to be
+confused with a null pattern, which is one member of the set
+of patterns matching a null string) will split the value of
+EXPR into separate characters at each point it matches that
+way. For example:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>print join(&acute;:&acute;, split(/ */, &acute;hi
+there&acute;));</p> </td></tr>
+</table>
+
+<p style="margin-top: 1em">produces the output
+h:i:t:h:e:r:e. The NUM parameter can be used to partially
+split a line</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>($login, $passwd, $remainder) = split(/:/, $_, 3);</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="69%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%">
+
+
+<p>(When assigning to a list, if NUM is omitted, perl
+supplies a NUM one larger than the number of variables in
+the list, to avoid unnecessary work. For the list above NUM
+would have been 4 by default. In time critical applications
+it behooves you not to split into more fields than you
+really need.) If the PATTERN contains parentheses,
+additional array elements are created from each matching
+substring in the delimiter.</p></td>
+<td width="7%">
+
+
+<p>split(/([,-])/,&quot;1-10,20&quot;); produces the array
+value</p> </td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="69%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>(1,&rsquo;-&rsquo;,10,&rsquo;,&rsquo;,20) The pattern
+/PATTERN/ may be replaced with an expression to specify
+patterns that vary at runtime. (To do runtime compilation
+only once, use /$variable/o.) As a special case, specifying
+a space (&acute;&nbsp;&acute;) will split on white space
+just as split with no arguments does, but leading white
+space does NOT produce a null first field. Thus,
+split(&acute;&nbsp;&acute;) can be used to emulate default
+behavior, whereas split(/&nbsp;/) will give you as many null
+initial fields as there are leading spaces. Example:</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="69%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>open(passwd, &acute;/etc/passwd&acute;);</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="69%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>while (&lt;passwd&gt;) {</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="69%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%">
+</td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>($login, $passwd, $uid, $gid, $gcos, $home, $shell)</p></td>
+<td width="8%"></td>
+<td width="69%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%">
+</td>
+<td width="7%">
+</td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p>= split(/:/);</p></td>
+<td width="69%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%">
+</td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>...</p></td>
+<td width="8%"></td>
+<td width="69%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="69%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">(Note that $shell above will
+still have a newline on it. See chop().) See also Returns a
+string formatted by the usual printf conventions. The *
+character is not supported. Return the square root of EXPR.
+If EXPR is omitted, returns square root of $_. Sets the
+random number seed for the operator. If EXPR is omitted,
+does srand(time). Returns a 13-element array giving the
+statistics for a file, either the file opened via
+FILEHANDLE, or named by EXPR. Typically used as follows:</p>
+
+
+<p style="margin-top: 1em">($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
+<br>
+$atime,$mtime,$ctime,$blksize,$blocks) <br>
+= stat($filename);</p>
+
+<p style="margin-top: 1em">If stat is passed the special
+filehandle consisting of an underline, no stat is done, but
+the current contents of the stat structure from the last
+stat or filetest are returned. Example:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>if (-x $file &amp;&amp; (($d) = stat(_)) &amp;&amp; $d
+&lt; 0) {</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>print &quot;$file is executable NFS file\n&quot;;</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Takes extra time to study SCALAR
+($_ if unspecified) in anticipation of doing many pattern
+matches on the string before it is next modified. This may
+or may not save time, depending on the nature and number of
+patterns you are searching on, and on the distribution of
+character frequencies in the string to be searchedyou
+probably want to compare runtimes with and without it to see
+which runs faster. Those loops which scan for many short
+constant strings (including the constant parts of more
+complex patterns) will benefit most. You may have only one
+study active at a timeif you study a different scalar the
+first is unstudied. (The way study works is this: a linked
+list of every character in the string to be searched is
+made, so we know, for example, where all the k characters
+are. From each search string, the rarest character is
+selected, based on some static frequency tables constructed
+from some C programs and English text. Only those places
+that contain this rarest character are examined.) For
+example, here is a loop which inserts index producing
+entries before any line containing a certain pattern:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>while (&lt;&gt;) {</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>study;</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>print &quot;.IX foo\n&quot; if /\bfoo\b/;</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>print &quot;.IX bar\n&quot; if /\bbar\b/;</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>print &quot;.IX blurfl\n&quot; if /\bblurfl\b/;</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>...</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>print;</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">In searching for /\bfoo\b/, only
+those locations in $_ that contain f will be looked at,
+because f is rarer than o. In general, this is a big win
+except in pathological cases. The only question is whether
+it saves you more time than it took to build the linked list
+in the first place. Note that if you have to look for
+strings that you don&rsquo;t know till runtime, you can
+build an entire loop as a string and eval that to avoid
+recompiling all your patterns all the time. Together with
+setting $/ to input entire files as one record, this can be
+very fast, often faster than specialized programs like
+fgrep. The following scans a list of files (@files) for a
+list of words (@words), and prints out the names of those
+files that contain a match:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$search = &acute;while (&lt;&gt;) { study;&acute;;</p></td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>foreach $word (@words) {</p></td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$search .= &quot;++\$seen{\$ARGV} if
+/\b$word\b/;\n&quot;;</p> </td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$search .= &quot;}&quot;;</p></td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>@ARGV = @files;</p></td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$/ = &quot;\177&quot;;</p></td>
+<td width="16%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># something that doesn&rsquo;t occur</p></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>eval $search;</p></td>
+<td width="16%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># this screams</p></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>$/ = &quot;\n&quot;;</p></td>
+<td width="16%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># put back to normal input delim</p></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>foreach $file (sort keys(%seen)) {</p></td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>print $file, &quot;\n&quot;;</p></td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="16%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="54%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Extracts a substring out of EXPR
+and returns it. First character is at offset 0, or whatever
+you&rsquo;ve set $[ to. If OFFSET is negative, starts that
+far from the end of the string. You can use the substr()
+function as an lvalue, in which case EXPR must be an lvalue.
+If you assign something shorter than LEN, the string will
+shrink, and if you assign something longer than LEN, the
+string will grow to accomodate it. To keep the string the
+same length you may need to pad or chop your value using
+sprintf(). Calls the system call specified as the first
+element of the list, passing the remaining elements as
+arguments to the system call. If unimplemented, produces a
+fatal error. The arguments are interpreted as follows: if a
+given argument is numeric, the argument is passed as an int.
+If not, the pointer to the string value is passed. You are
+responsible to make sure a string is pre-extended long
+enough to receive any result that might be written into a
+string. If your integer arguments are not literals and have
+never been interpreted in a numeric context, you may need to
+add 0 to them to force them to look like numbers.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>do &rsquo;syscall.h&rsquo;;</p></td>
+<td width="23%"></td>
+<td width="8%">
+</td>
+<td width="8%">
+
+
+<p># may need to run makelib</p></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>syscall(&amp;SYS_write, fileno(STDOUT), &quot;hi
+there\n&quot;, 9);</p></td>
+<td width="23%"></td>
+<td width="8%"></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Does exactly the same thing as
+exec LIST except that a fork is done first, and the parent
+process waits for the child process to complete. Note that
+argument processing varies depending on the number of
+arguments. The return value is the exit status of the
+program as returned by the wait() call. To get the actual
+exit value divide by 256. See also Creates a new filename
+symbolically linked to the old filename. Returns 1 for
+success, 0 otherwise. On systems that don&rsquo;t support
+symbolic links, produces a fatal error at run time. To check
+for that, use eval:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$symlink_exists = (eval
+&acute;symlink(&quot;&quot;,&quot;&quot;);&acute;, $@ eq
+&acute;&acute;);</p> </td></tr>
+</table>
+
+<p style="margin-top: 1em">Returns the current file
+position for FILEHANDLE. FILEHANDLE may be an expression
+whose value gives the name of the actual filehandle. If
+FILEHANDLE is omitted, assumes the file last read. Returns
+the current position of the readdir() routines on DIRHANDLE.
+Value may be given to seekdir() to access a particular
+location in a directory. Has the same caveats about possible
+directory compaction as the corresponding system library
+routine. Returns the number of non-leap seconds since
+January 1, 1970, UTC. Suitable for feeding to gmtime() and
+localtime(). Returns a four-element array giving the user
+and system times, in seconds, for this process and the
+children of this process. <br>
+($user,$system,$cuser,$csystem) = times; Translates all
+occurrences of the characters found in the search list with
+the corresponding character in the replacement list. It
+returns the number of characters replaced. If no string is
+specified via the =~ or !~ operator, the $_ string is
+translated. (The string specified with =~ must be a scalar
+variable, an array element, or an assignment to one of
+those, i.e. an lvalue.) For devotees, is provided as a
+synonym for Examples:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+
+
+<p>$ARGV[1] =~ y/A&minus;Z/a&minus;z/;</p><td width="6%"></td>
+<td width="2%"></td>
+<td width="23%"></td>
+<td width="7%"></td>
+<td width="8%"></td>
+<td width="8%">
+
+
+<p># canonicalize to lower case</p>
+
+<p style="margin-top: 1em">$cnt = tr/*/*/;</p></td>
+<td width="46%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="6%"></td>
+<td width="2%"></td>
+<td width="23%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p># count the stars in $_</p></td>
+<td width="8%"></td>
+<td width="46%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">($HOST = $host) =~
+tr/a&minus;z/A&minus;Z/;</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+
+
+<p>y/\001&minus;@[&minus;_{&minus;\177/ /;</p><td width="6%"></td>
+<td width="2%"></td>
+<td width="38%"></td>
+<td width="8%">
+
+
+<p># change non-alphas to space</p></td>
+<td width="46%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">Sets the umask for the process
+and returns the old one. If EXPR is omitted, merely returns
+current umask. Undefines the value of EXPR, which must be an
+lvalue. Use only on a scalar value, an entire array, or a
+subroutine name (using &amp;). (Undef will probably not do
+what you expect on most predefined variables or dbm array
+values.) Always returns the undefined value. You can omit
+the EXPR, in which case nothing is undefined, but you still
+get an undefined value that you could, for instance, return
+from a subroutine. Examples:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>undef $foo;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>undef $bar{&rsquo;blurfl&rsquo;};</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>undef @ary;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>undef %assoc;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>undef &amp;mysub;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>return (wantarray ? () : undef) if $they_blew_it;</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">Deletes a list of files. Returns
+the number of files successfully deleted.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$cnt = unlink &acute;a&acute;, &acute;b&acute;,
+&acute;c&acute;;</p> </td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>unlink @goners;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>unlink &lt;*.bak&gt;;</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">Note: unlink will not delete
+directories unless you are superuser and the flag is
+supplied to Even if these conditions are met, be warned that
+unlinking a directory can inflict damage on your filesystem.
+Use rmdir instead. Unpack does the reverse of pack: it takes
+a string representing a structure and expands it out into an
+array value, returning the array value. The TEMPLATE has the
+same format as in the pack function. Here&rsquo;s a
+subroutine that does substring:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>sub substr {</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>local($what,$where,$howmuch) = @_;</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+</td>
+<td width="8%">
+
+
+<p>unpack(&quot;x$where a$howmuch&quot;, $what);</p></td>
+<td width="77%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%">
+
+
+<p>}</p></td>
+<td width="8%"></td>
+<td width="77%">
+</td></tr>
+</table>
+
+<p style="margin-top: 1em">and then there&rsquo;s</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>sub ord { unpack(&quot;c&quot;,$_[0]); }</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">Does the opposite of a Or the
+opposite of a depending on how you look at it. Prepends list
+to the front of the array, and returns the number of
+elements in the new array.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>unshift(ARGV, &acute;&minus;e&acute;) unless $ARGV[0] =~
+/^&minus;/;</p> </td></tr>
+</table>
+
+<p style="margin-top: 1em">Changes the access and
+modification times on each file of a list of files. The
+first two elements of the list must be the NUMERICAL access
+and modification times, in that order. Returns the number of
+files successfully changed. The inode modification time of
+each file is set to the current time. Example of a touch
+command:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>#!/usr/bin/perl</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>$now = time;</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>utime $now, $now, @ARGV;</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">Returns a normal array
+consisting of all the values of the named associative array.
+The values are returned in an apparently random order, but
+it is the same order as either the keys() or each() function
+would produce on the same array. See also keys() and each().
+Treats a string as a vector of unsigned integers, and
+returns the value of the bitfield specified. May also be
+assigned to. BITS must be a power of two from 1 to 32.
+Vectors created with vec() can also be manipulated with the
+logical operators |, &amp; and ^, which will assume a bit
+vector operation is desired when both operands are strings.
+This interpretation is not enabled unless there is at least
+one vec() in your program, to protect older programs. Waits
+for a child process to terminate and returns the pid of the
+deceased process. The status is returned in $?. Returns true
+if the context of the currently executing subroutine is
+looking for an array value. Returns false if the context is
+looking for a scalar.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>return wantarray ? () : undef;</p></td></tr>
+</table>
+
+<p style="margin-top: 1em">Produces a message on STDERR
+just like die, but doesn&rsquo;t exit. Writes a formatted
+record (possibly multi-line) to the specified file, using
+the format associated with that file. By default the format
+for a file is the one having the same name is the
+filehandle, but the format for the current output channel
+(see may be set explicitly by assigning the name of the
+format to the $~ variable. Top of form processing is handled
+automatically: if there is insufficient room on the current
+page for the formatted record, the page is advanced, a
+special top-of-page format is used to format the new page
+header, and then the record is written. By default the
+top-of-page format is top, but it may be set to the format
+of your choice by assigning the name to the $^ variable. If
+FILEHANDLE is unspecified, output goes to the current
+default output channel, which starts out as but may be
+changed by the operator. If the FILEHANDLE is an EXPR, then
+the expression is evaluated and the resulting string is used
+to look up the name of the FILEHANDLE at run time. For more
+on formats, see the section on formats later on. Note that
+write is NOT the opposite of read.</p>
+<hr>
+</body>
+</html>
