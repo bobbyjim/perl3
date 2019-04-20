@@ -33,8 +33,9 @@ char	*rninstr();
 char	*nsavestr();
 FILE	*mypopen();
 int	mypclose();
-#ifndef BCOPY
-#ifndef MEMCPY
-char	*bcopy();
-#endif
-#endif
+
+// #ifndef BCOPY
+// #ifndef MEMCPY
+// char	*bcopy();
+// #endif
+// #endif

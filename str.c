@@ -18,6 +18,7 @@
 #include "EXTERN.h"
 #include "perl.h"
 #include "perly.h"
+#include <errno.h>
 
 extern char **environ;
 
@@ -108,7 +109,7 @@ double num;
 #endif
 }
 
-extern int errno;
+// extern int errno;	rje
 
 char *
 str_2ptr(str)

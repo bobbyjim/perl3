@@ -9,19 +9,19 @@
 export PATH || (echo "OOPS, this isn't sh.  Desperation time.  I will feed myself to sh."; sh $0; kill $$)
 
 cat='/bin/cat'
-ccflags='-E '
+ccflags=' '
 cp='/bin/cp'
-cpp='/bin/cpp'
+cpp='/usr/bin/cpp'
 echo='/bin/echo'
 egrep='/bin/egrep'
-expr='/bin/expr'
+expr='/usr/bin/expr'
 mv='/bin/mv'
 rm='/bin/rm'
 sed='/bin/sed'
-sort='/bin/sort'
+sort='/usr/bin/sort'
 test='test'
-tr='/bin/tr'
-uniq='/bin/uniq'
+tr='/usr/bin/tr'
+uniq='/usr/bin/uniq'
 
 : the following weeds options from ccflags that are of no interest to cpp
 case "$ccflags" in

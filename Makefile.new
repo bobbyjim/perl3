@@ -299,7 +299,3 @@ shlist:
 	echo $(sh) | tr ' ' '\012' >.shlist
 
 # AUTOMATICALLY GENERATED MAKE DEPENDENCIES--PUT NOTHING BELOW THIS LINE
-perly.o $(obj):
-	@ echo "You haven't done a "'"make depend" yet!'; exit 1
-makedepend: makedepend.SH
-	/bin/sh makedepend.SH

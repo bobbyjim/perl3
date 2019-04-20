@@ -15,7 +15,7 @@
 #include "perl.h"
 #include <errno.h>
 
-extern int errno;
+// extern int errno;	rje
 
 STR *
 hfetch(tb,key,klen,lval)

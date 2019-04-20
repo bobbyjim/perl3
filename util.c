@@ -13,7 +13,7 @@
 
 #include "EXTERN.h"
 #include "perl.h"
-#include "errno.h"
+#include <errno.h>
 #include <signal.h>
 
 #ifdef I_VFORK
@@ -688,7 +688,7 @@ int newlen;
     }
 }
 
-extern int errno;
+// extern int errno; 	rje
 
 #ifndef VARARGS
 /*VARARGS1*/

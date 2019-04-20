@@ -15,6 +15,8 @@ char rcsid[] = "$Header: perly.c,v 3.0 89/10/18 15:22:21 lwall Locked $\nPatch l
 #include "perl.h"
 #include "perly.h"
 #include "patchlevel.h"
+#include <stdio.h>
+#include <errno.h>
 
 #ifdef IAMSUID
 #ifndef DOSUID
@@ -286,9 +288,9 @@ a copy of which can be found with the Perl 3.0 distribution kit.\n",stdout);
 	rsfp = stdin;
     else
 	rsfp = fopen(argv[0],"r");
-    if (rsfp == Nullfp) {
-	extern char *sys_errlist[];
-	extern int errno;
+    if (rsfp == Nullfp) {		
+	// extern char *sys_errlist[];	rje
+	// extern int errno;	rje
 
 #ifdef DOSUID
 #ifndef IAMSUID		/* in case script is not readable before setuid */

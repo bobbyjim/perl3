@@ -1,0 +1,2 @@
+cc -Os -w -c *.c
+cc *.o -lm -Os -o perl3

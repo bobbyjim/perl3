@@ -13,6 +13,7 @@
 
 #include "EXTERN.h"
 #include "perl.h"
+#include "random.h"
 
 #include <signal.h>
 #include <errno.h>
@@ -21,7 +22,7 @@
 #   include <vfork.h>
 #endif
 
-extern int errno;
+// extern int errno;	rje
 
 #ifdef VOIDSIG
 static void (*ihand)();
@@ -1122,6 +1123,11 @@ register int sp;
 	value = cos(value);
 	goto donumset;
     case O_RAND:
+        value = burtle_random();
+        if (maxarg > 0) 
+           value *= str_gnum(st[1]);
+        
+/*					rje
 	if (maxarg < 1)
 	    value = 1.0;
 	else
@@ -1141,6 +1147,7 @@ register int sp;
 #endif
 #endif
 #endif
+*/
 	goto donumset;
     case O_SRAND:
 	if (maxarg < 1) {
@@ -1149,7 +1156,7 @@ register int sp;
 	}
 	else
 	    anum = (int)str_gnum(st[1]);
-	(void)srand(anum);
+	(void)burtle_srand(anum);
 	goto say_yes;
     case O_EXP:
 	if (maxarg < 1)

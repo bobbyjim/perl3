@@ -1595,11 +1595,11 @@ int *arglast;
 #endif
 #endif
 	(void)astore(ary, ++sp, str = str_static(&str_no));
-#ifdef PWCLASS
-	str_set(str,pwent->pw_class);
-#else
-	str_set(str, pwent->pw_comment);
-#endif
+// #ifdef PWCLASS	 rje
+//	str_set(str,pwent->pw_class);	rje !
+// #else	rje
+// 	str_set(str, pwent->pw_comment);	rje
+// #endif	rje
 	(void)astore(ary, ++sp, str = str_static(&str_no));
 	str_set(str, pwent->pw_gecos);
 	(void)astore(ary, ++sp, str = str_static(&str_no));
